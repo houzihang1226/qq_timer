@@ -82,5 +82,12 @@ Page({
         console.log(res);
       }
     })
+  },
+  onShareAppMessage() {
+    console.log('触发了我')
+    return {
+      title: '下班倒计时',
+      imageUrl:'http://img.netbian.com/file/2020/0304/83f4b8dc41fe069de22b7e736c580497.jpg'
+    }
   }
 })

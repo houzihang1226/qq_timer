@@ -19,3 +19,4 @@
     <view>{{timer}}</view>
   </view>
 </view>
+<button open-type="share" type="primary">分享</button>

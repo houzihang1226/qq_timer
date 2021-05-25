@@ -32,3 +32,13 @@
   align-items: center;
   justify-content: center;
 }
+
+
+button{
+  width: 300rpx;
+
+  position: fixed;
+  bottom: 30rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
