@@ -1,17 +1,18 @@
 Page({
   data: {
     imgUrls: [
-      'https://images.cnblogs.com/cnblogs_com/myan/1979149/o_2105241058091.jpg',
-      'https://images.cnblogs.com/cnblogs_com/myan/1979149/o_2105241058172.jpg',
-      'https://images.cnblogs.com/cnblogs_com/myan/1979149/o_2105241058294.jpg',
-      'https://images.cnblogs.com/cnblogs_com/myan/1979149/o_2105241059203.jpg',
+      'http://img.netbian.com/file/2021/0505/534974d61465e607f5821a82d43a06c6.jpg',
+      'http://img.netbian.com/file/2021/0408/762b7521d45f66ee20b6d46278b2236c.jpg',
+      'http://img.netbian.com/file/2020/0304/83f4b8dc41fe069de22b7e736c580497.jpg',
+      'http://img.netbian.com/file/2018/0717/eedc028654a97e0895f3bf1d796640a5.jpg',
     ],
-    indicatorDots: false,
     interval: 3000,
     time: '',
     timeFlag: true,
     timer: '',
-    XB_Times: null
+    XB_Times: null,
+    start: '00:00',
+    end: '23:00'
   },
   bindTimeChange(e) {
     console.log(e);
@@ -69,5 +70,17 @@ Page({
       XB_Times
     })
     this.countDown(XB_Times);
+  },
+  onLookImg(e) {
+    console.log(e);
+    let current = e.currentTarget.dataset.item
+    let that = this
+    qq.previewImage({
+      urls: that.data.imgUrls,
+      current,
+      success(res) {
+        console.log(res);
+      }
+    })
   }
 })
